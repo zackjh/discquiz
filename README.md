@@ -87,3 +87,8 @@ The database does not have any quiz questions when the application is first init
 | `/remove <time>` | Time in HH:MM format | Removes the daily quiz scheduled for the specified {time}. | `/remove 10:35` |
 | `/schedule`      | None                 | Displays all currently scheduled daily quizzes.            | `/schedule`     |
 | `/leaderboard`   | None                 | Displays the leaderboard.                                  | `/leaderboard`  |
+
+## Future Enhancements
+
+- [ ] Add the ability to schedule a daily leaderboard message
+- [ ] Improve design of [rules webpage](https://zackjh.github.io/discquiz/)
