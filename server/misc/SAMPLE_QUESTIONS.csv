@@ -1,0 +1,117 @@
+question_text,correct_answer,remarks
+"If the pull lands out-of-bounds without first touching the playing field, the thrower in possession of the disc can wait until they get to the perimeter line before choosing to call a ‘Brick’. (7.12)",FALSE,See Rule 7.12
+"• Player A is on offence and is making a play on the disc.
+• Player B is on defence and is also making a play on the disc.
+• Player B is behind Player A.
+• Player A slows down and moves to prevent Player B from getting around them.
+• Player B is able to avoid contact with Player A.
+• Player A catches the disc.
+This is allowed and the play stands. (12.5)",TRUE,See Rule 12.5
+"If play has stopped because of a foul call, any player can choose to move to avoid a potential pick, even without agreement from the opposition. (18.3.3.1)",FALSE,See Rule 18.3.3.1. Must be in agreement with the opposition.
+"Every player is entitled to occupy any position on the field not occupied by any opposing player, provided that they do not initiate contact in taking such a position, and are not moving in a reckless or dangerously aggressive manner. (12.5)",TRUE,See Rule 12.5. This rule was updated in 2021
+Players must be stationary anytime that play is ‘dead’ (8.1.5),FALSE,See Rule 8.1.5
+A rolling disc may only be stopped by the offence. (8.4),FALSE,See Rule 8.4
+A disc that has been caught by a player is not considered part of that player. (Definitions),TRUE,See Definition of Possession of the disc. This rule was updated in 2021
+"• A player catches the disc while running.
+• They do not change direction.
+• They do not increase speed.
+• They make only 1 additional point of contact with the ground after the catch.
+They may release a pass while airborne (18.2.2.1)",TRUE,See Rule 18.2.2.1. This rule was updated in 2021
+"If a player is not reasonably certain that they will be able to make a legal play at the disc before an opponent who is moving in a legal manner, they may call ‘Dangerous Play’ and the disc will be returned to the thrower. (12.6.1.)",FALSE,See Rule 12.6.1.
+"• A pass from Team A is intercepted in the central zone by a player from Team B.
+• The player from Team B then intentionally drops the disc.
+This is a 'double turnover' and Team A can now take possession. (13.6)",FALSE,See Rule 13.6
+"• The thrower calls a marking violation for repeated double teams.
+• At the same time the thrower attempts a pass.
+• The pass is incomplete.
+The disc comes back to the thrower. (18.1.6)",FALSE,See Rule 18.1.6.
+"• There is a foul called by the thrower during the act of throwing.
+• The intended receiver drops the disc.
+• The marker accepts it was a foul.
+The disc must go back to the thrower, even if the foul did not affect the play. (16.3)",FALSE,See Rule 16.3
+A defender can purposefully bobble the disc to themselves for the sole purpose of moving in a specific direction. (18.2.5.5),FALSE,See Rule 18.2.5.5.
+"• A receiver, Player A, is attempting to catch a pass.
+• Player A touches the disc, but has not yet caught the disc.
+• As Player A touches the disc, a defender hits the disc away.
+• The disc hits the ground.
+Player A can call a Strip Foul (17.3.1)",FALSE,See Rule 17.3.1. The disc must be caught before a strip can be called
+"• The pull has hit the ground and is rolling along the ground.
+• Player A fumbles the disc as they go to pick it up and they never gain control of the disc.
+• The disc hits the ground.
+Player A can pick the disc up again (8.1.4)",TRUE,See Rule 8.1.4
+"• An offensive player catches the disc in the end zone they are attacking.
+• They lose possession due to ground contact related to the catch.
+• The disc hits the ground.
+This is a goal. (14.1.2)",FALSE,See Rule 14.1.2
+A pick can occur when any player is prevented from moving towards/with their opponent by another player. (18.3.1),FALSE,See Rule 18.3.1 - only a defender can call a pick
+"An injury stoppage is considered to have been called at the time of the injury, unless the injured player chooses to continue play before the stoppage is called. (19.1.5)",TRUE,See Rule 19.1.5.
+"• The marker is illegally positioned.
+• There is non-minor contact between the thrower and the marker.
+This is a foul by the marker. (17.6.1.1)",TRUE,See Rule 17.6.1.1
+"• The marker calls ‘Travel’ as the thrower makes a pass.
+• The receiver drops the pass.
+If the receiver believes the ‘Travel’ call affected the play, then the disc goes back to the thrower. (18.2.8)",FALSE,"See Rule 18.2.8. An incomplete pass after a travel call is always a turnover, regardless of whether or not the call affected the play."
+"• An offensive player catches the disc in the central zone.
+• Their momentum causes them to leave the central zone and go into their attacking end zone.
+They must restart play with a ground tap. (14.3)",FALSE,See Rule 14.3. There is no requirement for a ground tap
+"• A player catches the disc while running.
+• They do not change direction.
+• They do not increase speed.
+• They make 3 additional points of contact with the ground after the catch.
+They may release a pass while airborne (18.2.2.1)",FALSE,They can make a maximin of 2 additional points of contact. See Rule 18.2.2.1. This rule was updated in 2021
+"• The thrower calls ‘Fast count’.
+• The marker does not contest.
+• The marker immediately resumes the stall count with the number last fully uttered before the call, minus one.
+• The stall count gets to ‘5’.
+• The thrower calls ‘Straddle’.
+• The marker does not contest.
+The marker must stop straddling, and resume the stall count at ‘1’. (18.1.3)",FALSE,See Rule 18.1.3.
+"• An offensive player catches the disc in the end zone they are attacking.
+• They then lose possession due to ground contact related to the catch.
+• The disc hits the ground.
+This is a turnover. (14.1.2)",TRUE,See Rule 14.1.2
+"If players agree to ask a person on the sideline for their perspective on an out of bounds call, they must accept that person’s call. (1.10.2, 1.11)",FALSE,See Rules 1.10.2 and 1.11
+After a turnover out-of-bounds the thrower must establish a pivot at the correct spot before they can call a time-out. (20.3),FALSE,See Rule 20.3. They can call it once they establish possession.
+A defender is guarding an offensive player when they are within three meters of that offensive player and are reacting to that offensive player. (Definitions),TRUE,See the definition of ‘Guarding’
+"• There has been a time-out during play.
+• The defence change the player who is marking the thrower.
+The stall count stays the same. (20.3.6)",FALSE,See Rules 20.3.
+"Actions such as intentional fouling, cheating, dangerous plays, disrespectful conversations, and other ‘win at all costs’ behaviour must be avoided. (1.6)",TRUE,See Rule 1.6
+An offensive player catches the disc in the end zone they are attacking but then throws an incomplete pass. This is a goal. (14.1),TRUE,See Rule 14.1. There is no requirement to acknowledge a goal has occurred
+"• There has been a turnover out of bounds.
+• The thrower picks up the disc.
+• The thrower runs to the pivot location.
+• As they run, they wind up for a throw.
+• Then they establish a pivot and make a pass.
+This is a travel infraction (18.2.5.3)",TRUE,See Rule 18.2.5.3. This rule was updated in 2021
+"The marker can have their head above the throwers pivot, as long as it is one disc diameter away from the torso of the thrower. (18.1.1.4)",FALSE,See Rule 18.1.1.4.
+It can only be a ‘Wrapping’ infraction if a line between a defensive player’s hands or arms intersects the thrower’s torso (18.1.1.4),FALSE,See Rule 18.1.1.4. This rule was updated in 2021
+"• The offence makes an ‘offside’ call against the defence.
+• The offence then catches the pull.
+They can resume play as if a brick had been called (7.5.2)",FALSE,"To call offside, the offence must let the disc hit the ground. See Rule 7.5.2 This rule was updated in 2021"
+"• A stoppage has occurred.
+• The thrower has possession but the disc is not within reach of a defender.
+To restart play the defender nearest to the disc must call ‘Disc In’. (10.6.1.2)",FALSE,See Rule 10.6.1.2
+"A pick can occur when a defender is prevented from moving towards/with their opponent, but only if they are obstructed by another opponent. (18.3.1)",FALSE,See Rule 18.3.1 - the reference to ‘another opponent’ is incorrect
+"• A ‘Pick’ is called while the thrower still has the disc.
+• The thrower does not hear the ‘pick’ call.
+• The thrower makes a pass to a receiver.
+• The receiver drops the pass.
+The disc goes back to the thrower, unless both teams agree that the Pick, or Pick call, did not affect the play. (16.3)",TRUE,See Rule 16.3
+"After signalling readiness, and prior to the pull, the offence must stand stationary anywhere in the endzone. (7.3)",FALSE,See Rule 7.3
+"If a novice player is involved in a breach and does not know the rules, experienced players should only assist if the novice player was the one who committed the breach (1.8)",FALSE,See Rule 1.8. This rule was updated in 2021
+"If a novice player is involved in a breach and does not know the rules, experienced players should assist to explain the breach (1.8)",TRUE,See Rule 1.8. This rule was updated in 2021
+"• A pick is called by Player A while the disc is in the air.
+• The pass is incomplete.
+Play can continue without a stoppage if Player A makes a ‘Play on’ call. (16.2.4.1)",TRUE,See Rule 16.2.4.1. This rule was updated in 2021
+"Whenever a foul or violation call is made, play stops immediately and no turn over is possible . There are no exceptions to this rule. (16.1)",FALSE,See Rule 16.1
+"If there is a deliberate breach of the rules, the captains should discuss this, but they can’t change the outcome of the play as determined by the rules (1.2.1)",FALSE,See Rule 1.2.1. This rule was updated in 2021
+"People on the side line must not give advice on foul calls, even if they are asked by the players involved. (1.10.2)",FALSE,See Rule 1.10.2
+"The place where a disc becomes out-of-bounds and where a disc went out-of-bounds is always the same. (11.6, 11.8)",FALSE,See Rule 11.6 and 11.8
+After a ‘stall-out’ turnover play must stop. (13.2),TRUE,See Rule 13.2
+"If offensive and defensive players catch the disc simultaneously, the disc is returned to the thrower. (12.3)",FALSE,See Rule 12.3
+"• A stall-out is called.
+• The thrower still has the disc.
+The thrower can contest the stall-out if they did not have a reasonable chance to call a fast count. (13.4)",TRUE,See Rule 13.4
+A receiver is walking to the goal line after an accepted defensive receiving foul in the attacking endzone. The defender must wait until a pivot is established at the goal line before they can start the stall count. (17.2.2),TRUE,See Rule 17.2.2.
+"After a turnover in the endzone, the thrower can call a time-out as they walk the disc up to the goal line. (20.3)",TRUE,See Rule 20.3.

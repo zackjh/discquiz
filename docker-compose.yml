@@ -1,0 +1,21 @@
+services:
+  server:
+    image: zackjh/discquiz-server:x64
+    container_name: discquiz-server
+    volumes:
+      - discquiz-db:/etc/discquiz
+    environment:
+      DATABASE_PATH: /etc/discquiz/discquiz.db
+  telegram-bot:
+    image: zackjh/discquiz-telegram-bot:x64
+    container_name: discquiz-telegram-bot
+    environment:
+      FLASK_API_URL: http://discquiz-server:5000
+      LIST_OF_ADMINS: "[<your Telegram user ID>]"
+      LOCAL_TIMEZONE: <your local timezone>
+      RULES_PAGE_URL: https://zackjh.github.io/discquiz/
+      TELEGRAM_BOT_API_TOKEN: <your Telegram bot API token>
+
+
+volumes:
+  discquiz-db:

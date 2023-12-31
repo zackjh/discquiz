@@ -1,0 +1,14 @@
+# Exclude virtual environments
+.venv
+
+# Exclude local development files
+.git/
+.gitignore
+.vscode/
+.idea/
+
+# Exclude logs, cache, and other unnecessary files
+*.log
+*.cache
+*.pyc
+__pycache__/
