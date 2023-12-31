@@ -107,12 +107,15 @@ def format_quiz_remarks(quiz_remarks_text, rules_page_url):
         elif re.match(rule_pattern, word):
             if word[-1] == ".":
                 word = word[0:-1]
-
-            word_escaped = escape_markdownv2(word)
-            url = escape_markdownv2(f"{rules_page_url}#{word}")
-
-            words[i] = f"[{word_escaped}]({url})"
+                word_escaped = escape_markdownv2(word)
+                url = escape_markdownv2(f"{rules_page_url}#{word}")
+                words[i] = f"[{word_escaped}]({url})\."
+            else:
+                word_escaped = escape_markdownv2(word)
+                url = escape_markdownv2(f"{rules_page_url}#{word}")
+                words[i] = f"[{word_escaped}]({url})"
         else:
+            words[i] = escape_markdownv2(word)
             continue
 
     return " ".join(words)
