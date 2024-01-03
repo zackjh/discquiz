@@ -10,7 +10,7 @@ DiscQuiz has been developed using Docker Compose, hence it is recommended that y
 
 2. Copy `docker-compose.yml` into your local machine.
 
-3. In your `docker-compose.yml`, update the `LIST_OF_ADMINS`, `LOCAL_TIMEZONE`, and `TELEGRAM_BOT_API_TOKEN` with the appropriate values.
+3. In your `docker-compose.yml`, update the `DAILY_LEADERBOARD_TIME`, `LIST_OF_ADMINS`, `LOCAL_TIMEZONE`, and `TELEGRAM_BOT_API_TOKEN` environment variables with the appropriate values.
 
    - Obtain your Telegram user ID using [this guide](https://www.itgeared.com/how-to-find-someones-telegram-id/#How%20To%20Find%20Someone's%20Telegram%20Id:~:text=you%20find%20it.-,How%20To%20Find%20Someone%E2%80%99s%20Telegram%20ID,-Your%20Telegram%20ID).
    - Find your local timezone from [this list](https://gist.github.com/heyalexej/8bf688fd67d7199be4a1682b3eec7568).
@@ -31,6 +31,7 @@ DiscQuiz has been developed using Docker Compose, hence it is recommended that y
        image: discquiz-telegram-bot
        container_name: discquiz-telegram-bot
        environment:
+         DAILY_LEADERBOARD_TIME: 12:00
          FLASK_API_URL: http://discquiz-server:5000
          LIST_OF_ADMINS: "[123456789]"
          LOCAL_TIMEZONE: Asia/Singapore
@@ -86,4 +87,3 @@ The database does not have any quiz questions when the application is first init
 | `/new <time>`    | Time in HH:MM format | Sets up a quiz to be sent at the specified {time} daily.   | `/new 10:35`    |
 | `/remove <time>` | Time in HH:MM format | Removes the daily quiz scheduled for the specified {time}. | `/remove 10:35` |
 | `/schedule`      | None                 | Displays all currently scheduled daily quizzes.            | `/schedule`     |
-| `/leaderboard`   | None                 | Displays the leaderboard.                                  | `/leaderboard`  |
