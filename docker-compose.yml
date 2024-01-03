@@ -10,7 +10,7 @@ services:
     image: zackjh/discquiz-telegram-bot:x64
     container_name: discquiz-telegram-bot
     environment:
-      DAILY_LEADERBOARD_TIME: <your desired daily leaderboard time>
+      DAILY_LEADERBOARD_TIME: <your desired daily leaderboard time in HH:MM format>
       FLASK_API_URL: http://discquiz-server:5000
       LIST_OF_ADMINS: "[<your Telegram user ID>]"
       LOCAL_TIMEZONE: <your local timezone>
