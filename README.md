@@ -87,3 +87,8 @@ The database does not have any quiz questions when the application is first init
 | `/new <time>`    | Time in HH:MM format | Sets up a quiz to be sent at the specified {time} daily.   | `/new 10:35`    |
 | `/remove <time>` | Time in HH:MM format | Removes the daily quiz scheduled for the specified {time}. | `/remove 10:35` |
 | `/schedule`      | None                 | Displays all currently scheduled daily quizzes.            | `/schedule`     |
+
+## Future Enhancements
+
+- [ ] Add the ability to schedule a daily leaderboard message
+- [ ] Improve design of [rules webpage](https://zackjh.github.io/discquiz/)
