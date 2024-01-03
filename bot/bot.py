@@ -35,6 +35,7 @@ from telegram.ext import (
 from decorators import restricted
 from utils import escape_markdownv2, format_quiz_remarks
 
+DAILY_LEADERBOARD_TIME = os.environ["DAILY_LEADERBOARD_TIME"]
 FLASK_API_URL = os.environ["FLASK_API_URL"]
 LOCAL_TIMEZONE = os.environ["LOCAL_TIMEZONE"]
 RULES_PAGE_URL = os.environ["RULES_PAGE_URL"]
@@ -53,7 +54,8 @@ logging.getLogger("httpx").setLevel(logging.WARNING)
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     # pylint: disable=unused-argument
     """
-    Sends a reply message indicating that the bot is running.
+    Adds a 'send_leaderboard' job to the job queue and sends a reply message
+    indicating that the bot is running.
 
     This function is restricted to being invoked by a user in "LIST_OF_ADMINS".
 
@@ -67,8 +69,19 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         None
     """
 
+    context.job_queue.run_daily(
+        send_leaderboard,
+        datetime.strptime(DAILY_LEADERBOARD_TIME, "%H:%M"),
+        chat_id=update.message.chat_id,
+        data={
+            "message_thread_id": update.message.message_thread_id,
+        },
+    )
+
     await update.message.reply_text(
-        "DiscQuiz is running.", message_thread_id=update.message.message_thread_id
+        "DiscQuiz is running.\n"
+        f"The leaderboard will be updated at {DAILY_LEADERBOARD_TIME} daily.",
+        message_thread_id=update.message.message_thread_id,
     )
 
 
@@ -110,7 +123,7 @@ async def new_quiz(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             quiz_time_is_invalid = False
             scheduled_jobs = context.job_queue.jobs()
             for job in scheduled_jobs:
-                if job.data["time_to_send"] == new_quiz_time:
+                if job.data.get("time_to_send") == new_quiz_time:
                     quiz_time_is_invalid = True
                     break
 
@@ -213,7 +226,9 @@ async def get_schedule(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
     schedule = []
     scheduled_jobs = context.job_queue.jobs()
     for job in scheduled_jobs:
-        schedule.append(job.data["time_to_send"])
+        time_to_send = job.data.get("time_to_send")
+        if time_to_send:
+            schedule.append(time_to_send)
 
     schedule.sort()
 
@@ -271,7 +286,7 @@ async def remove_quiz(update: Update, context: ContextTypes.DEFAULT_TYPE) -> Non
             scheduled_jobs = context.job_queue.jobs()
             quiz_was_removed = False
             for job in scheduled_jobs:
-                if job.data["time_to_send"] == quiz_time_to_remove:
+                if job.data.get("time_to_send") == quiz_time_to_remove:
                     job.schedule_removal()
                     quiz_was_removed = True
                     break
@@ -290,16 +305,13 @@ async def remove_quiz(update: Update, context: ContextTypes.DEFAULT_TYPE) -> Non
                 )
 
 
-@restricted
-async def show_leaderboard(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+async def send_leaderboard(context: ContextTypes.DEFAULT_TYPE) -> None:
     """
-    Sends a reply message containing the current leaderboard.
+    Sends a message containing the current leaderboard.
 
-    This function is restricted to being invoked by a user in "LIST_OF_ADMINS".
+    This function runs when a 'send_leaderboard' job in the job queue runs.
 
     Args:
-        update: A python-telegram-bot Update object that represents the incoming
-                    update.
         context: A python-telegram-bot Context object that represents the
                     context for the incoming update.
 
@@ -328,9 +340,10 @@ async def show_leaderboard(update: Update, context: ContextTypes.DEFAULT_TYPE) -
                 )
                 leaderboard_position += 1
 
-            await update.message.reply_text(
-                bot_reply_message,
-                message_thread_id=update.message.message_thread_id,
+            await context.bot.send_message(
+                text=bot_reply_message,
+                chat_id=context.job.chat_id,
+                message_thread_id=context.job.data["message_thread_id"],
                 parse_mode="MarkdownV2",
             )
         case _:
@@ -401,7 +414,6 @@ def main() -> None:
     application.add_handler(CommandHandler("new", new_quiz))
     application.add_handler(CommandHandler("remove", remove_quiz))
     application.add_handler(CommandHandler("schedule", get_schedule))
-    application.add_handler(CommandHandler("leaderboard", show_leaderboard))
     application.add_handler(PollAnswerHandler(receive_quiz_answer))
 
     # Run the bot until the user presses Ctrl-C
